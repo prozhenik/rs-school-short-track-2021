@@ -11,32 +11,18 @@
  *
  */
 
-class Queue {
-  constructor() {
-    this.oldIndex = 1;
-    this.newIndex = 1;
-    this.data = {};
-    ListNode();
-  }
-
-  get size() {
-    return this.oldIndex - this.newIndex;
-  }
-
-  enqueue(element) {
-    this.data[this.newIndex] = element;
-    this.newIndex++;
-  }
-
-  dequeue() {
-    let delItem;
-    if (this.oldIndex !== this.newIndex) {
-      delItem = this.data[this.oldIndex];
-      delete this.data[this.oldIndex];
-      this.oldIndex++;
+ class Queue {
+    get size() {
+      throw new Error('Not implemented');
     }
-    return delItem;
+  
+    enqueue(/* element */) {
+      throw new Error('Not implemented');
+    }
+  
+    dequeue() {
+      throw new Error('Not implemented');
+    }
   }
-}
-
-export default Queue;
+  
+  module.exports = Queue;
