@@ -12,27 +12,27 @@
  */
 
  class Queue {
-    constructor () {
-      this.queue = new ListNode();
-      this.nod = this.queue;
+     constructor () {
+         this.queue = new ListNode();
+         this.nod = this.queue;
     }
-  
+    
     get size() {
-      return this.queue.length;
+        return this.queue.length;
     }
   
     enqueue(element) {
-      this.nod.value = element;
-      this.nod.next = new ListNode();
-      this.nod = this.nod.next;
+        this.nod.value = element;
+        this.nod.next = new ListNode();
+        this.nod = this.nod.next;
     }
-  
+    
     dequeue() {
-      const result = this.queue.value;
-      this.queue.value = this.queue.next.value;
-      this.queue.next = this.queue.next.next;
-      return result;
+        const result = this.queue.value;
+        this.queue.value = this.queue.next.value;
+        this.queue.next = this.queue.next.next;
+        return result;
     }
 }
-  
-  module.exports = Queue;
+
+module.exports = Queue;
