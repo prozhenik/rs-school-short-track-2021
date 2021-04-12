@@ -13,7 +13,7 @@ const ListNode = require('../extensions/list-node');
 
 class Queue {
   constructor () {
-    this.linkedList - null;
+    this.linkedList = null;
   }
 
   get size() {
